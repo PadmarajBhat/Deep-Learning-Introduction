@@ -10,3 +10,15 @@
     * similar to SMOTE, synthetic minority oversampling technique, where algorithm tries to put an additional point in the cluster to increase the number of samples of a minority class.
 
 * https://hackernoon.com/memorizing-is-not-learning-6-tricks-to-prevent-overfitting-in-machine-learning-820b091dc42 talks about 6 different techniques to overfit the model.
+  * get more data
+  * augument the data
+  * drop out
+  * l1 and l2 regularization on feature weights
+    * l1 penalizes the absolute value of the weights
+      * can identify the important features by making the non important feature's weight as 0
+      * less computation efficient (why?)
+    * l2 penalizes the squared value of the weights 
+      * better computational efficient
+      * thumb rule is to first apply l2 and see if it improves the accuracy and if not then use l1 to penalize the non important
+   * early termination: overfitting occurs when we focus on increasing accuracy but we can stop the epoch to a preset accuracy level. This may be done by having extra epochs and then a plot of training and validation plot and then in the second iteration of training stop at the position noted at the last iteration.
+   * Simplify the model by providing the hyper parameter values with again prior experience of the dataset modelling.
