@@ -4,3 +4,7 @@
 * when it comes to max pooling, the same formula applies. We would have one layer per convoluted layer and hence multilayer max pooled layer. Note, usually strides and max pooling is applied so that max pooling keeps the important and strides reduce the size of the image.
 * https://colab.research.google.com/github/tensorflow/examples/blob/master/courses/udacity_intro_to_tensorflow_for_deep_learning/l05c01_dogs_vs_cats_without_augmentation.ipynb for quick code to train cat and dog color images
   * This is an example of how the over fitting can happen and the way it is identified is through 2 plots. One for the accuracy comparison between training and validation and other plot is to compare the loss between the training and testing.
+
+* Image Augumentation: Synthesis of the images when training data is low in volume (we see that the model overfit for various combination of the CNN)
+  * we can vertical or horizontal flip the images, random zoom and chop off the image with no charasteristic features.
+    * similar to SMOTE, synthetic minority oversampling technique, where algorithm tries to put an additional point in the cluster to increase the number of samples of a minority class.
