@@ -8,3 +8,5 @@
 * Image Augumentation: Synthesis of the images when training data is low in volume (we see that the model overfit for various combination of the CNN)
   * we can vertical or horizontal flip the images, random zoom and chop off the image with no charasteristic features.
     * similar to SMOTE, synthetic minority oversampling technique, where algorithm tries to put an additional point in the cluster to increase the number of samples of a minority class.
+
+* https://hackernoon.com/memorizing-is-not-learning-6-tricks-to-prevent-overfitting-in-machine-learning-820b091dc42 talks about 6 different techniques to overfit the model.
