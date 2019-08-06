@@ -26,3 +26,5 @@
 ##### Transfer Learning:
 * it is all about transferring the learning from one model to the other. As the model learns the importance of the features through the training, transfer learning focuses on transferring the weights to new model.
  * note that the source of the transfer learning cannot be used as is because the purpose of the reference model may be different. for e.g. it might have been to detect the different number of classes. We also need to identify the right reference model because a car classification model cannot be used for flower class prediction. However, if the reference model is generic enough to detect car and flower can be used to fine tune new set of flower or car model prediction.
+ 
+ * clearly, the last layer might not be usable for current use. For e.g. there need not have to be thousand types for class predictions, we might need only two. And thus using the same model might not result in the needed class prediction. We may have to chop of the last layer or usually chopped model pre exist. When we add a new layer, we have to retrain the model with available dataset for pointing it to right classes.
