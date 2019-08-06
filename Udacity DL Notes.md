@@ -1,4 +1,4 @@
-#### Notes from the chapter: Going Ahead with CNNs
+#### Notes from the chapter: Going Ahead with CNNs and rest
 * When we say that image of size X * Y * Z then X and Y values are intuitive because the image we see is 2d and hence we can have a picture of X & Y. Now Z has to pictured as a layer of size X * Y and number of layers depends on the value of Z. Usually, Z =3 corresponding to RGB. In Other words, There are 3 layers, one for red with X*Y values, one for green with X*Y values and one for Blue with X*Y. Now, these are stacked on each other like a cube. Now when a ray of light  passes through all the 3 layers, then the compound effect of lights results in the beautiful colored picture.
 * since we have 3 layers in the input, kernel is also 3 layers but the output is 2d. i.e. convoluted image is 2d but like the conventional approach is to have multiple kernel, here also we can have multiple 3 layers kernel because of which we will have nd kernel output where n is number of kernels.
 * when it comes to max pooling, the same formula applies. We would have one layer per convoluted layer and hence multilayer max pooled layer. Note, usually strides and max pooling is applied so that max pooling keeps the important and strides reduce the size of the image.
@@ -22,3 +22,6 @@
       * thumb rule is to first apply l2 and see if it improves the accuracy and if not then use l1 to penalize the non important
    * early termination: overfitting occurs when we focus on increasing accuracy but we can stop the epoch to a preset accuracy level. This may be done by having extra epochs and then a plot of training and validation plot and then in the second iteration of training stop at the position noted at the last iteration.
    * Simplify the model by providing the hyper parameter values with again prior experience of the dataset modelling.
+   
+##### Transfer Learning:
+* it is all about transferring the learning from one model to the other. As the model learns the importance of the features through the training, transfer learning focuses on transferring the weights to new model.
