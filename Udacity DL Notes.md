@@ -29,3 +29,5 @@
  
  * clearly, the last layer might not be usable for current use. For e.g. there need not have to be thousand types for class predictions, we might need only two. And thus using the same model might not result in the needed class prediction. We may have to chop of the last layer or usually chopped model pre exist. When we add a new layer, we have to retrain the model with available dataset for pointing it to right classes.
  * Nice visualization of CNNs for image classification : https://towardsdatascience.com/understanding-your-convolution-network-with-visualizations-a4883441533b
+ 
+ * There are couple of hands on experiment in this course on colab. I will perform those but before that I want to browse deeplearning.ai course material. Intro is catchy !!!
