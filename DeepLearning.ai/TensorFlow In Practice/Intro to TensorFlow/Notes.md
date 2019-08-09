@@ -3,4 +3,4 @@
 * executed the colab work to check if the increase in neuron for the first layer makes any difference. 
 * flatten layer at the input is the must if we are not using cnn but if we have cnn then conv2d can take 3d input.
 * flatten layer will be used in cnn as well at the end of convolutions. This will reduce the number of nuerons requirement without compromising the image recognition accuracy.
-  
+* normalization required so that loss function or optimizer would not land on high values.
