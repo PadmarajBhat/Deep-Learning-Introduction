@@ -4,3 +4,7 @@
 * flatten layer at the input is the must if we are not using cnn but if we have cnn then conv2d can take 3d input.
 * flatten layer will be used in cnn as well at the end of convolutions. This will reduce the number of nuerons requirement without compromising the image recognition accuracy.
 * normalization required so that loss function or optimizer would not land on high values.
+* quiet obvious but even then the number of classses in the neural network should be equal to the final dense layer shape.
+  * usually relu layer is used for all the activations of the neurons
+    * activation : outcome of neuron processing goes through a function (relu / softmax) and the result determines that the neuron has some value for next layer or not. Hence, "activation". With the abundandant neurons in the neural network, there is high chance of some neurons not contributing to the final outcome.
+      * neuro processing: summation of (input features * weight ) + bias
