@@ -15,3 +15,7 @@
     * the size os half as it is a window 2x2 and hence reduces the size to half in both hieght and width.
 
 * *tf.feature_column* helps us  to map the categorical values to tensor/keras layers (https://www.tensorflow.org/guide/feature_columns)
+
+  * indicator column :  is equivalent to one hot encoding : 1 for the categorical value and 0 for others but what if the millions or billions categorical values.
+  * embedding column : compresses the number of features in case of many categorical values. the values inside the vector represenation is learnt during the training processes and the number of features to represent a categorical feature depends on the formula 
+    * number of categorical to the power of 0.25
