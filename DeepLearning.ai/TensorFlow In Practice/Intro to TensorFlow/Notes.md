@@ -8,3 +8,8 @@
   * usually relu layer is used for all the activations of the neurons
     * activation : outcome of neuron processing goes through a function (relu / softmax) and the result determines that the neuron has some value for next layer or not. Hence, "activation". With the abundandant neurons in the neural network, there is high chance of some neurons not contributing to the final outcome.
       * neuro processing: summation of (input features * weight ) + bias
+      
+* Max Pooling actually takes the best of the window(which is usually of size 2x2). Hence, keeps the important value and shrinks the size.
+  * a 148 x 148 x 64 convolution output will be shrinked to 74x74x64 with no additional parameters.
+    * there are no parameters because it only a max function on the window
+    * the size os half as it is a window 2x2 and hence reduces the size to half in both hieght and width.
