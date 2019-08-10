@@ -19,3 +19,7 @@
   * indicator column :  is equivalent to one hot encoding : 1 for the categorical value and 0 for others but what if the millions or billions categorical values.
   * embedding column : compresses the number of features in case of many categorical values. the values inside the vector represenation is learnt during the training processes and the number of features to represent a categorical feature depends on the formula 
     * number of categorical to the power of 0.25
+
+* *when is densefeature used?*
+* *how do we feed the pandas to tf pipeline?*
+  * Ans: https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/r2/tutorials/keras/feature_columns.ipynb#scrollTo=dxQloQ9jOoXL
