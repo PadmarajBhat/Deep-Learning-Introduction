@@ -20,8 +20,8 @@
   * embedding column : compresses the number of features in case of many categorical values. the values inside the vector represenation is learnt during the training processes and the number of features to represent a categorical feature depends on the formula 
     * number of categorical to the power of 0.25
 
-* ##### when is densefeature used?**
-* ##### how do we feed the pandas to tf pipeline?**
+* ##### when is densefeature used?
+* ##### how do we feed the pandas to tf pipeline?
   * Ans: https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/r2/tutorials/keras/feature_columns.ipynb#scrollTo=dxQloQ9jOoXL
 
 * ##### what is tensorboard? How it is used ? should it be used at all ?
@@ -31,3 +31,12 @@
 * ##### How to save the model in tensorflow?
   * model.save("path and file name", save_format = 'tf'
   * tf.keras.models.load_model("path\to\file")
+
+* **tensorflow serving**: 
+  * is it only to load the model to tensorflow based server and ui has access to it grpc ?
+  
+* **tensorflow lite**:
+  * is it only for loading the model and not to build the model on the mobile device ?
+  
+* **tensorflow JS**:
+ * is it to load the model in the ui application to immediately load the model and predict online ?
