@@ -23,3 +23,8 @@
 * *when is densefeature used?*
 * *how do we feed the pandas to tf pipeline?*
   * Ans: https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/r2/tutorials/keras/feature_columns.ipynb#scrollTo=dxQloQ9jOoXL
+
+* what is tensorboard? How it is used ? should it be used at all ?
+* what is distributed training in tensorflow?
+
+* rapids.ai vs tensorflow distributed. is it a right set of comparison ? are these to alternatives ?
