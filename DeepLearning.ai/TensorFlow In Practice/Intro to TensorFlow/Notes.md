@@ -26,7 +26,17 @@
 
 * ##### what is tensorboard? How it is used ? should it be used at all ?
 * ##### what is distributed training in tensorflow?
-
+  ```
+  stratergy = tf.distribute.MirrorStratergy()
+  stratergy.scope():
+    model = Sequential([....])
+    model.compile(..)
+  ```
+  * this actually duplicates the model in to gpu and share the parameters during training and hence it is linearly scalable as in more the number of gpu more faster is the training.
+  * ##### should the data be distributed before building model ? or TF variable automatically scales/sliced to different worker nodes?
+  * ##### is it a replacement to spark or rapid + dask ?
+  * ##### Does automatically recognizes the underlying cluster manager like yarn or mesos and completely abstract the configuration requirements ? Does it also provide the parameter facilities to override default configuration ?
+  
 * ##### rapids.ai vs tensorflow distributed. is it a right set of comparison ? are these to alternatives ?
 * ##### How to save the model in tensorflow?
   * model.save("path and file name", save_format = 'tf'
@@ -36,7 +46,9 @@
   * is it only to load the model to tensorflow based server and ui has access to it grpc ?
   
 * **tensorflow lite**:
-  * is it only for loading the model and not to build the model on the mobile device ?
+  * is it only for **loading** the model and not to **build** the model on the mobile device ?
   
 * **tensorflow JS**:
  * is it to load the model in the ui application to immediately load the model and predict online ?
+
+* 
