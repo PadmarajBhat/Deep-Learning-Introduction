@@ -9,22 +9,25 @@
     * activation : outcome of neuron processing goes through a function (relu / softmax) and the result determines that the neuron has some value for next layer or not. Hence, "activation". With the abundandant neurons in the neural network, there is high chance of some neurons not contributing to the final outcome.
       * neuro processing: summation of (input features * weight ) + bias
       
-* *Max Pooling* actually takes the best of the window(which is usually of size 2x2). Hence, keeps the important value and shrinks the size.
+* **Max Pooling** actually takes the best of the window(which is usually of size 2x2). Hence, keeps the important value and shrinks the size.
   * a 148 x 148 x 64 convolution output will be shrinked to 74x74x64 with no additional parameters.
     * there are no parameters because it only a max function on the window
     * the size os half as it is a window 2x2 and hence reduces the size to half in both hieght and width.
 
-* *tf.feature_column* helps us  to map the categorical values to tensor/keras layers (https://www.tensorflow.org/guide/feature_columns)
+* **tf.feature_column** helps us  to map the categorical values to tensor/keras layers (https://www.tensorflow.org/guide/feature_columns)
 
   * indicator column :  is equivalent to one hot encoding : 1 for the categorical value and 0 for others but what if the millions or billions categorical values.
   * embedding column : compresses the number of features in case of many categorical values. the values inside the vector represenation is learnt during the training processes and the number of features to represent a categorical feature depends on the formula 
     * number of categorical to the power of 0.25
 
-* *when is densefeature used?*
-* *how do we feed the pandas to tf pipeline?*
+* ##### when is densefeature used?**
+* ##### how do we feed the pandas to tf pipeline?**
   * Ans: https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/r2/tutorials/keras/feature_columns.ipynb#scrollTo=dxQloQ9jOoXL
 
-* what is tensorboard? How it is used ? should it be used at all ?
-* what is distributed training in tensorflow?
+* ##### what is tensorboard? How it is used ? should it be used at all ?
+* ##### what is distributed training in tensorflow?
 
-* rapids.ai vs tensorflow distributed. is it a right set of comparison ? are these to alternatives ?
+* ##### rapids.ai vs tensorflow distributed. is it a right set of comparison ? are these to alternatives ?
+* ##### How to save the model in tensorflow?
+  * model.save("path and file name", save_format = 'tf'
+  * tf.keras.models.load_model("path\to\file")
