@@ -36,7 +36,8 @@
   * ##### should the data be distributed before building model ? or TF variable automatically scales/sliced to different worker nodes?
   * ##### is it a replacement to spark or rapid + dask ?
   * ##### Does automatically recognizes the underlying cluster manager like yarn or mesos and completely abstract the configuration requirements ? Does it also provide the parameter facilities to override default configuration ?
-  
+      * The author of the video at Google I/O at 15th minute said that it is one machine with multiple GPU in it is what the above code achieves parallelism. https://www.youtube.com/watch?v=lEljKc9ZtU8&list=PLQY2H8rRoyvy2_vtWvCpQWM9GJXNTa5rV&index=2
+      
 * ##### rapids.ai vs tensorflow distributed. is it a right set of comparison ? are these to alternatives ?
 * ##### How to save the model in tensorflow?
   * model.save("path and file name", save_format = 'tf'
