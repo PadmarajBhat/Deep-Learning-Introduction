@@ -23,6 +23,15 @@
 * ##### when is densefeature used?
 * ##### how do we feed the pandas to tf pipeline?
   * Ans: https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/r2/tutorials/keras/feature_columns.ipynb#scrollTo=dxQloQ9jOoXL
+    * ```tf.data.Dataset.from_tensor_slices((df.values, target.values))``` 
+     *  This most often as the panda reades both features and labels
+       * alternatively, you can have ```tf.data.Dataset.from_tensor_slices((df[df.columns[:-1]].values, df[df.columns[-1]].values))``` 
+       * if you dont want intrim variable
+    or
+    * ```tf.data.Dataset.from_tensor_slices((dict(df), labels))```
+      * here you convert the pandas to dictionary and then hypothetically you have seperate labels variable
+      
+    * In either cases , from_tensor_slices, is the magic function.
 
 * ##### what is tensorboard? How it is used ? should it be used at all ?
 * ##### what is distributed training in tensorflow?
