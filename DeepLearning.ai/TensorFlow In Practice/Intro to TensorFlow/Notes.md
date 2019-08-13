@@ -35,6 +35,7 @@
 
 * ##### what is tensorboard? How it is used ? should it be used at all ?
 * ##### what is distributed training in tensorflow?
+![TF Arch](https://github.com/PadmarajBhat/Deep-Learning-Introduction/blob/master/TF%20DataFlow%20Pipeline.PNG)
   ```
   stratergy = tf.distribute.MirrorStratergy()
   stratergy.scope():
