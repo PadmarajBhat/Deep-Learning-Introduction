@@ -54,7 +54,9 @@
   * tf.keras.models.load_model("path\to\file")
 
 * **tensorflow serving**: 
-  * is it only to load the model to tensorflow based server and ui has access to it grpc ?
+  * is it only to load the model to tensorflow based server and ui has access to it through grpc ?
+    * it can give both API or grpc access
+      * anyone can access the service with valid parameter and would get the prediction output. Auto scaled and versioning mechanism is also provided.
   
 * **tensorflow lite**:
   * is it only for **loading** the model and not to **build** the model on the mobile device ?
