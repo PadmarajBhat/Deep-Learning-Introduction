@@ -62,4 +62,8 @@
 * **tensorflow JS**:
  * is it to load the model in the ui application to immediately load the model and predict online ?
 
-* 
+* TensorFlow is a library written in C++ and gets compiled at backend to create a AutoGraph. It can also be accelerated.
+  ```
+  @tf.function
+  ```
+  This one liner has to be placed before to the function definition which has tf code to get accelerated.
