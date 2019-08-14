@@ -34,6 +34,17 @@
     * In either cases , from_tensor_slices, is the magic function.
 
 * ##### what is tensorboard? How it is used ? should it be used at all ?
+  * First of all, you need not have to use it at all. You can just scroll through the output of the training output and make a guess manually. However, it might get tricky if the epochs are > 50 then you would need a plot. Here you can use *history* can be used to plot the loss and accuracy
+    ```
+    history = model.fit(...)
+    print( history.history.keys())
+    ....plot code....
+    ```
+    * If you want to get away with those head aches you can use tensorboard. I used it to see
+       * keras layer in graph
+       * training and validation prediction scores over epochs 
+       * loss per epochs
+       
 * ##### what is distributed training in tensorflow?
 ![TF Arch](https://github.com/PadmarajBhat/Deep-Learning-Introduction/blob/master/TF%20DataFlow%20Pipeline.PNG)
   ```
