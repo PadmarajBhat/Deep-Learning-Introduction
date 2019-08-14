@@ -67,3 +67,5 @@
   @tf.function
   ```
   This one liner has to be placed before to the function definition which has tf code to get accelerated.
+  
+ * tf older version can be migrated to tf 2.0 with simple script run : https://medium.com/tensorflow/upgrading-your-code-to-tensorflow-2-0-f72c3a4d83b5
