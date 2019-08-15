@@ -44,7 +44,28 @@
        * keras layer in graph
        * training and validation prediction scores over epochs 
        * loss per epochs
-       
+    * To Kick start with loading
+      ```!pip install -q tf-nightly-2.0-preview
+      # Load the TensorBoard notebook extension
+      %load_ext tensorboard```
+     * Define the logs to read the statistics from
+      ```
+       logdir = os.path.join("logs", datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
+       tensorboard_callback = tf.keras.callbacks.TensorBoard(logdir, histogram_freq=1)
+      ```
+     * Finally, launch it post training:
+      ```
+      %tensorboard --logdir logs
+      ```
+     * Few more control through notebook 
+      ```
+      from tensorboard import notebook
+      notebook.list() # View open TensorBoard instances
+      # Control TensorBoard display. If no port is provided, 
+      # the most recently launched TensorBoard is used
+      notebook.display(port=6006, height=1000) 
+      ```
+     
 * ##### what is distributed training in tensorflow?
 ![TF Arch](https://github.com/PadmarajBhat/Deep-Learning-Introduction/blob/master/TF%20DataFlow%20Pipeline.PNG)
   ```
