@@ -38,7 +38,7 @@
     ```
     history = model.fit(...)
     print( history.history.keys())
-    ....plot code....
+    ....plot code.... #https://keras.io/visualization/
     ```
     * If you want to get away with those head aches you can use tensorboard. I used it to see
        * keras layer in graph
