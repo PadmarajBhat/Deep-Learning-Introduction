@@ -109,3 +109,5 @@
   * Similar example would be in translating where language model can be biased to detect the musculine and feminine words.
   * The solution is only to look the data in various angles, geographical data, open data to be not biased to one source, test early and test often.
   * Note that the data keeps changing, there cannot be same pattern of interaction with the system.
+* What is the difference between federated and distributed learning?
+ 
