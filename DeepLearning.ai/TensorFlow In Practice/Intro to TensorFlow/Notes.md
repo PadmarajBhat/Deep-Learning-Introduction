@@ -103,3 +103,9 @@
   This one liner has to be placed before to the function definition which has tf code to get accelerated.
   
  * tf older version can be migrated to tf 2.0 with simple script run : https://medium.com/tensorflow/upgrading-your-code-to-tensorflow-2-0-f72c3a4d83b5
+
+* There can be unknown biases:
+  * there are issues like if all the images are of Indian Hindu wedding, even if the accuracy is 90% . The model is only 10% accurate for he world dataset 
+  * Similar example would be in translating where language model can be biased to detect the musculine and feminine words.
+  * The solution is only to look the data in various angles, geographical data, open data to be not biased to one source, test early and test often.
+  * Note that the data keeps changing, there cannot be same pattern of interaction with the system.
