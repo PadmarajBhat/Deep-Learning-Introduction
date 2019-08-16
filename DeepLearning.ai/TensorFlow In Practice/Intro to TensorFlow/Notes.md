@@ -117,4 +117,33 @@
   * The solution is only to look the data in various angles, geographical data, open data to be not biased to one source, test early and test often.
   * Note that the data keeps changing, there cannot be same pattern of interaction with the system.
 * What is the difference between federated and distributed learning?
+
+
+##### Questions (Inerviewing myself):
+tensorflow data input processing
+	what else is there in the tensorflow	
+		distributed processing
+		saving models
+		building NN models through keras
+		tensorboard
+		importing various types of data	
+			HDFS
+			file read
+			csv
+			image processing
+			any pipes? like steams
+			can we save back the data post processing
+				batching
+			can spark dataframe be used along with tensor_slicing (like that of panda)
+		incremental learning / pausing the learning
+		batch normalization
+		transfer learning
+		what is debuggin model ?
+			watching variables ?
+		any inbuilt plotting like plotting?
+		hyperparameter tuning ?
+			for estimators only ?
+transfer learning for word processing
+
+
  
