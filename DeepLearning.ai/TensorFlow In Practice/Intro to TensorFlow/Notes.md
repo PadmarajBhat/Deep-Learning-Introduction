@@ -75,6 +75,8 @@
     model.compile(..)
   ```
   * this actually duplicates the model in to gpu and share the parameters during training and hence it is linearly scalable as in more the number of gpu more faster is the training.
+  * https://www.tensorflow.org/guide/distribute_strategy indicates that the distributed can also be multiple system with multiple gpu
+  
   * ##### should the data be distributed before building model ? or TF variable automatically scales/sliced to different worker nodes?
   * ##### is it a replacement to spark or rapid + dask ?
   * ##### Does automatically recognizes the underlying cluster manager like yarn or mesos and completely abstract the configuration requirements ? Does it also provide the parameter facilities to override default configuration ?
