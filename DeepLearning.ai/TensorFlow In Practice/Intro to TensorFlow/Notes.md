@@ -77,8 +77,11 @@
   * this actually duplicates the model in to gpu and share the parameters during training and hence it is linearly scalable as in more the number of gpu more faster is the training.
   * https://www.tensorflow.org/guide/distribute_strategy indicates that the distributed can also be multiple system with multiple gpu
   
+  
   * ##### should the data be distributed before building model ? or TF variable automatically scales/sliced to different worker nodes?
   * ##### is it a replacement to spark or rapid + dask ?
+    * No, it complements spark. https://github.com/tensorflow/examples/blob/master/community/en/docs/deploy/hadoop.md indicates that tf can read the HDFS file. This concludes that it has its presence in hadoop. However, it need not use spark architecture to assign tasks to worker node. Instead, itself manages the parameter update from the worker node. It is unlike the spark echo system, where a job is written with single source of input and single node approach where as spark makes the seemless access to single source input of the distributed data and does the heavy lifting of assigning the same computation on different worker node for the data they have or assigned with.
+    
   * ##### Does automatically recognizes the underlying cluster manager like yarn or mesos and completely abstract the configuration requirements ? Does it also provide the parameter facilities to override default configuration ?
       * The author of the video at Google I/O at 15th minute said that it is one machine with multiple GPU in it is what the above code achieves parallelism. https://www.youtube.com/watch?v=lEljKc9ZtU8&list=PLQY2H8rRoyvy2_vtWvCpQWM9GJXNTa5rV&index=2
       
