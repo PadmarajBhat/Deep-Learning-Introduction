@@ -34,7 +34,7 @@
     * In either cases , from_tensor_slices, is the magic function.
 
 * ##### what is tensorboard? How it is used ? should it be used at all ?
-  * First of all, you need not have to use it at all. You can just scroll through the output of the training output and make a guess manually. However, it might get tricky if the epochs are > 50 then you would need a plot. Here you can use *history* can be used to plot the loss and accuracy
+  * First of all, you need not have to use it at all the times a model is built. You can just scroll through the output of the training output and make a guess manually if the loss is decreasing or increasing. However, it might get tricky if the epochs are > 50 then you would need a plot. Here you can use **history** can be used to plot the loss and accuracy
     ```
     history = model.fit(...)
     print( history.history.keys())
@@ -65,7 +65,10 @@
       # the most recently launched TensorBoard is used
       notebook.display(port=6006, height=1000) 
       ```
-     
+      
+      * You can also plug in couple of lines in the code and can have good visualization for the hyper parameter tuning.
+     		* https://www.youtube.com/watch?v=xM8sO33x_OU 8 mins video for more details.
+		
 * ##### what is distributed training in tensorflow?
 ![TF Arch](https://github.com/PadmarajBhat/Deep-Learning-Introduction/blob/master/TF%20DataFlow%20Pipeline.PNG)
   ```
@@ -129,7 +132,13 @@
 	* oriented for reasearchers to work to play around with different layer definitiona and optimization experiments.
 
 ##### Questions (Inerviewing myself):
-tensorflow data input processing
+* what are the different tensorflow data input processing capabilities?
+	* https://www.youtube.com/watch?v=-nTe44WT0ZI talks about the dataset operations. i.e. once data is is provided as dataset what are operation that can be done on it
+		* map : apply series of preprocessing stpes 
+			* ** num_parallel_calls** : for high throughput
+		* shuffle and batch : most common operation to remove any bias inference through the order of data in data set is to shuffle. Batch is for both splitting the huge data set into smaller subset (to fit in the physical device capacity ) for one iteration of the neural network and also to give balanced target/label dataset for each iteration
+		* prefetch: to avoid cpu/gpu starving for the input post training
+		
 	what else is there in the tensorflow	
 		distributed processing
 		saving models
