@@ -120,6 +120,13 @@
   * Note that the data keeps changing, there cannot be same pattern of interaction with the system.
 * What is the difference between federated and distributed learning?
 
+* **SWIFT**: TF team promotes swift programming language for tf coding for following reasons-
+	* Interoperability with other languages
+		* you can import the python (any) libraries like matplotlib or numpy
+		* you can import c libraries 
+	* typed language: early detection of errors, compiled for faster execution
+	* efficient compiler for low latency and auto graph detection
+	* oriented for reasearchers to work to play around with different layer definitiona and optimization experiments.
 
 ##### Questions (Inerviewing myself):
 tensorflow data input processing
