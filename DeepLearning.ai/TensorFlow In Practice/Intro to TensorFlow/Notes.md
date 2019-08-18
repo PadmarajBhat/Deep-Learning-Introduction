@@ -132,6 +132,16 @@
 	* oriented for reasearchers to work to play around with different layer definitiona and optimization experiments.
 
 ##### Questions (Inerviewing myself):
+* Importing through tf.data : https://www.youtube.com/watch?v=oFFbKogYdfc
+		importing various types of data	
+			HDFS
+			file read
+			csv
+			image processing
+			any pipes? like steams
+			can we save back the data post processing
+				batching
+
 * what are the different tensorflow data input processing capabilities?
 	* https://www.youtube.com/watch?v=-nTe44WT0ZI talks about the dataset operations. i.e. once data is is provided as dataset what are operation that can be done on it
 		* map : apply series of preprocessing stpes 
@@ -144,15 +154,8 @@
 		saving models
 		building NN models through keras
 		tensorboard
-		importing various types of data	
-			HDFS
-			file read
-			csv
-			image processing
-			any pipes? like steams
-			can we save back the data post processing
-				batching
-			can spark dataframe be used along with tensor_slicing (like that of panda)
+
+	can spark dataframe be used along with tensor_slicing (like that of panda)
 		incremental learning / pausing the learning
 		batch normalization
 		transfer learning
