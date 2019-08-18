@@ -139,6 +139,7 @@
 	train_file_path = tf.keras.utils.get_file("train.csv", TRAIN_DATA_URL)
 	```
 	* ```tf.convert_to_tensor``` can be used to vectorize the related features. That is to say that couple of columns are logically grouped.
+	* ```tf.feature_columns.numeric_column``` is necessary because unlike panda where data type of a feature inferred, tensor in tf needs explicit indicatation of the datatype. All feature of the input has to be numeric for the model build. then why do we need integer and not only tf.float ????
 		importing various types of data	
 			HDFS
 			file read
