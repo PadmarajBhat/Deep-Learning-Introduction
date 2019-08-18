@@ -132,12 +132,13 @@
 	* oriented for reasearchers to work to play around with different layer definitiona and optimization experiments.
 
 ##### Questions (Inerviewing myself):
-* Importing through tf.data : https://www.youtube.com/watch?v=oFFbKogYdfc
+* ***Importing through tf.data*** : https://www.youtube.com/watch?v=oFFbKogYdfc
 	* the above video tutorial indicates ``` tf.contrib.data.CsvDataset``` to use for the csv read. However, the latest version indicates, that we have to user keras util function to load csv: https://www.tensorflow.org/beta/tutorials/load_data/csv
 	```
 	TRAIN_DATA_URL = "https://storage.googleapis.com/tf-datasets/titanic/train.csv"
 	train_file_path = tf.keras.utils.get_file("train.csv", TRAIN_DATA_URL)
 	```
+	* ```tf.convert_to_tensor``` can be used to vectorize the related features. That is to say that couple of columns are logically grouped.
 		importing various types of data	
 			HDFS
 			file read
@@ -146,6 +147,7 @@
 			any pipes? like steams
 			can we save back the data post processing
 				batching
+			how to impute in the input data
 
 * what are the different tensorflow data input processing capabilities?
 	* https://www.youtube.com/watch?v=-nTe44WT0ZI talks about the dataset operations. i.e. once data is is provided as dataset what are operation that can be done on it
