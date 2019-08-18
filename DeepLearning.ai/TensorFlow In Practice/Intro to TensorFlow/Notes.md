@@ -133,6 +133,11 @@
 
 ##### Questions (Inerviewing myself):
 * Importing through tf.data : https://www.youtube.com/watch?v=oFFbKogYdfc
+	* the above video tutorial indicates ``` tf.contrib.data.CsvDataset``` to use for the csv read. However, the latest version indicates, that we have to user keras util function to load csv: https://www.tensorflow.org/beta/tutorials/load_data/csv
+	```
+	TRAIN_DATA_URL = "https://storage.googleapis.com/tf-datasets/titanic/train.csv"
+	train_file_path = tf.keras.utils.get_file("train.csv", TRAIN_DATA_URL)
+	```
 		importing various types of data	
 			HDFS
 			file read
