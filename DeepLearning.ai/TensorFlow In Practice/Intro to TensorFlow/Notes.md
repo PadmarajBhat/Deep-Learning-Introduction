@@ -179,4 +179,7 @@
 transfer learning for word processing
 
 
- 
+ * How Many times we can call model.fit ?
+ 	* when model.fit gets called for enough number of times, we generally have the model saved or used for prediction. As such the model itself, programmatically, do not stop us from calling the fit again. So what happens if we call again?
+		* if the same dataset is used then it is equivalent to increasing the number of iteration in our first call to model.fit.
+		* However, if the dataset/batch is new then even if ```train_on_batch``` or ```fit``` the loss function shows increase in the value.
