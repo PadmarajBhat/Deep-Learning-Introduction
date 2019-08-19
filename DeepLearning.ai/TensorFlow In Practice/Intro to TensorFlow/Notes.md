@@ -104,6 +104,8 @@
   
 * **tensorflow lite**:
   * is it only for **loading** the model and not to **build** the model on the mobile device ?
+  	* Yes, it is only for prediction. You need to build the model offsite and then convert it to lite format and then load the model on to mobile or any embedded device and then start usining through an app.
+	* Lite runs on a interpreter and interpreter size would be around 500KB along with other tightly coupled dependencies.
   
 * **tensorflow JS**:
  * is it to load the model in the ui application to immediately load the model and predict online ?
