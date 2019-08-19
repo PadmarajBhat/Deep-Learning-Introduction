@@ -141,6 +141,8 @@
 	train_file_path = tf.keras.utils.get_file("train.csv", TRAIN_DATA_URL)
 	```
 	* ```tf.convert_to_tensor``` can be used to vectorize the related features. That is to say that couple of columns are logically grouped.
+		* do we need to do it post from_tensor_slice ?
+			* may be if the panda has already done the one hot encoding.
 	* ```tf.feature_columns.numeric_column``` is necessary because unlike panda where data type of a feature inferred, tensor in tf needs explicit indicatation of the datatype. All feature of the input has to be numeric for the model build. then why do we need integer and not only tf.float ????
 		importing various types of data	
 			HDFS
@@ -155,7 +157,7 @@
 * what are the different tensorflow data input processing capabilities?
 	* https://www.youtube.com/watch?v=-nTe44WT0ZI talks about the dataset operations. i.e. once data is is provided as dataset what are operation that can be done on it
 		* map : apply series of preprocessing stpes 
-			* ** num_parallel_calls** : for high throughput
+			* **num_parallel_calls** : for high throughput
 		* shuffle and batch : most common operation to remove any bias inference through the order of data in data set is to shuffle. Batch is for both splitting the huge data set into smaller subset (to fit in the physical device capacity ) for one iteration of the neural network and also to give balanced target/label dataset for each iteration
 		* prefetch: to avoid cpu/gpu starving for the input post training
 		
