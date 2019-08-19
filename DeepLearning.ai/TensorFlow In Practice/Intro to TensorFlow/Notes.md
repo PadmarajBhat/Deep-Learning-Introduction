@@ -170,7 +170,7 @@
 	can spark dataframe be used along with tensor_slicing (like that of panda)
 		incremental learning / pausing the learning
 		batch normalization
-		transfer learning
+		
 		what is debuggin model ?
 			watching variables ?
 		any inbuilt plotting like plotting?
@@ -183,3 +183,9 @@ transfer learning for word processing
  	* when model.fit gets called for enough number of times, we generally have the model saved or used for prediction. As such the model itself, programmatically, do not stop us from calling the fit again. So what happens if we call again?
 		* if the same dataset is used then it is equivalent to increasing the number of iteration in our first call to model.fit.
 		* However, if the dataset/batch is new then even if ```train_on_batch``` or ```fit``` the loss function shows increase in the value.
+		
+* How do we achieve transfer learning in tensorflow? https://stackoverflow.com/a/46040835  &  https://www.tensorflow.org/tutorials/images/transfer_learning
+	* when inherting the weights you would have option of taking away the dense layer above the convolution layer
+		* usually, top layer is taken off as we have different set of classes for application 
+		* safest way to introduce new layer on top of base model put global average or max pooling
+		and then to put dense layer for classification
