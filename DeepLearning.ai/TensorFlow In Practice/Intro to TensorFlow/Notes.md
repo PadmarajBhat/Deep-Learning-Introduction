@@ -189,3 +189,7 @@ transfer learning for word processing
 		* usually, top layer is taken off as we have different set of classes for application 
 		* safest way to introduce new layer on top of base model put global average or max pooling
 		and then to put dense layer for classification
+		
+* Tensorflow Extended:
+	* it is the outer jacket to model built. It talks about production pipelines for model
+	* Meta data is written in each stages of the pipeline and read back at each stages of the pipeline.
