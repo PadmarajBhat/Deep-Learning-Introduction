@@ -197,3 +197,4 @@ transfer learning for word processing
 		* It saves the model, data and evaluation results
 		* each entry into to meta data is called artifacts and they have properties
 		* these artifacts help us moving forward or backword for our debugging , analysis and fast forwarding if the component is not changed in the entire ml pipeline.
+		* Apache Beam is used to do the meta data update operation. This may be with the anticipation that the model itself when written along with its various version, the size may be very huge. Moreover, Beam also provides both the scalability and parallelism which is suited for the pipe components to be concurrent.
