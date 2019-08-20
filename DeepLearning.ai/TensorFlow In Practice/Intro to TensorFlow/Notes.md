@@ -193,3 +193,7 @@ transfer learning for word processing
 * Tensorflow Extended:
 	* it is the outer jacket to model built. It talks about production pipelines for model
 	* Meta data is written in each stages of the pipeline and read back at each stages of the pipeline.
+		* It is saved as relational data and any SQL based db can be used for it
+		* It saves the model, data and evaluation results
+		* each entry into to meta data is called artifacts and they have properties
+		* these artifacts help us moving forward or backword for our debugging , analysis and fast forwarding if the component is not changed in the entire ml pipeline.
