@@ -34,7 +34,8 @@
       
     * In either cases , from_tensor_slices, is the magic function.
 * **Application of Convolution** : 
-	Nueral Style Transfer: It is all about super imposing 2 images to get a new images. https://www.youtube.com/watch?v=ChoV5h7tw5A&list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF&index=38
+	* Nueral Style Transfer: It is all about super imposing 2 images to get a new images. https://www.youtube.com/watch?v=ChoV5h7tw5A&list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF&index=38
+	* Convnet near to image actually learn the minor features like color and lines, later layers starts to identify complex patterns which are nothing but the combination of features.	
 	
 * ##### what is tensorboard? How it is used ? should it be used at all ?
   * First of all, you need not have to use it at all the times a model is built. You can just scroll through the output of the training output and make a guess manually if the loss is decreasing or increasing. However, it might get tricky if the epochs are > 50 then you would need a plot. Here you can use **history** can be used to plot the loss and accuracy
