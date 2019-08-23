@@ -47,6 +47,7 @@
 	f1 = activation_model.predict(test_image.reshape(1, 28, 28, 1))
 	plt.imshow(f1[0, : , :, CONVOLUTION_NUMBER], cmap='inferno')
 	```
+	* interesting visualization exercise
 * **Application of Convolution** : 
 	* Nueral Style Transfer: It is all about super imposing 2 images to get a new images. https://www.youtube.com/watch?v=ChoV5h7tw5A&list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF&index=38
 	* Convnet near to image actually learn the minor features like color and lines, later layers starts to identify complex patterns which are nothing but the combination of features.	
