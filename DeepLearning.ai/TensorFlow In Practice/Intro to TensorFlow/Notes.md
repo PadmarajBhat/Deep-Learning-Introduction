@@ -37,6 +37,16 @@
 * **Convolution**: Does not only makes training faster but also it is more accurate. How?
 	* faster because fewer neurons to train compared to equal number of fully connected layers
 	* back propagation takes into considaration of convolution with which it is optimizing/correcting on extracted features. More accurate the feature better is the prediction.
+* **Visualizing Convolutions**:
+	* Keras api gives access each of the layers output. Which can  then used as the activation model and thus we can view the output.
+	```
+	from tensorflow.keras import models
+	layer_outputs = [layer.output for layer in model.layers]
+	activation_model = tf.keras.models.Model(inputs = model.input, outputs = layer_outputs)
+	
+	f1 = activation_model.predict(test_image.reshape(1, 28, 28, 1))
+	plt.imshow(f1[0, : , :, CONVOLUTION_NUMBER], cmap='inferno')
+	```
 * **Application of Convolution** : 
 	* Nueral Style Transfer: It is all about super imposing 2 images to get a new images. https://www.youtube.com/watch?v=ChoV5h7tw5A&list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF&index=38
 	* Convnet near to image actually learn the minor features like color and lines, later layers starts to identify complex patterns which are nothing but the combination of features.	
