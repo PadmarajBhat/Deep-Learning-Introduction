@@ -33,6 +33,8 @@
       * here you convert the pandas to dictionary and then hypothetically you have seperate labels variable
       
     * In either cases , from_tensor_slices, is the magic function.
+
+* **Convolution**: Does not only makes training faster but also it is more accurate. How?
 * **Application of Convolution** : 
 	* Nueral Style Transfer: It is all about super imposing 2 images to get a new images. https://www.youtube.com/watch?v=ChoV5h7tw5A&list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF&index=38
 	* Convnet near to image actually learn the minor features like color and lines, later layers starts to identify complex patterns which are nothing but the combination of features.	
