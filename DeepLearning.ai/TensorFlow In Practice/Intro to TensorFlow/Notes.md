@@ -161,6 +161,8 @@
 ##### Questions (Inerviewing myself):
 
 * **ImageGenerator**: In case of images, the real world cases, we have the images in a folder structure. ImageGenerator can read the parent directory and can infer the label in the sub directory as the sub directory name. So all you need to do is to put the relavant  files in the respective subfolder and name subfolder as the label name. It can also create the *Batches, scaling, reshaping* while loading images.
+	* if generator is used to load the data then we need to have fit_generator to train the model. We need to hand stitch the batch and thus steps to an epoch so that model learns from all the training data.
+	* similarly, validation can also be batch wise and can also have steps to epoch so that all the validation data are used for calculating accuracy and loss for each epoch.
 
 * ***Importing through tf.data*** : https://www.youtube.com/watch?v=oFFbKogYdfc
 	* the above video tutorial indicates ``` tf.contrib.data.CsvDataset``` to use for the csv read. However, the latest version indicates, that we have to user keras util function to load csv: https://www.tensorflow.org/beta/tutorials/load_data/csv
