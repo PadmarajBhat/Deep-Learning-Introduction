@@ -37,6 +37,12 @@
 * **Convolution**: Does not only makes training faster but also it is more accurate. How?
 	* faster because fewer neurons to train compared to equal number of fully connected layers
 	* back propagation takes into considaration of convolution with which it is optimizing/correcting on extracted features. More accurate the feature better is the prediction.
+	* number of convolution layer can be determined through various factors:
+		* size of the image, 
+		* number of features to identify
+			* number of convolutions also helps us to identify the features. However, convolution layers also helps to identify the combination of features there by creating new features
+		* parameter capacity of the device where neurons being trained.
+		
 * **Visualizing Convolutions**:
 	* Keras api gives access each of the layers output. Which can  then used as the activation model and thus we can view the output.
 	```
