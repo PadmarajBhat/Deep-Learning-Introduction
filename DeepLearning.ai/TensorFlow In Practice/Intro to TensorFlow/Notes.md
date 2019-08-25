@@ -39,8 +39,10 @@
 	* back propagation takes into considaration of convolution with which it is optimizing/correcting on extracted features. More accurate the feature better is the prediction.
 	* number of convolution layer can be determined through various factors:
 		* size of the image, 
+			* Is it that putting layers and maxpooling reducing it to flattened neurons around 1000 gets the better result ?
 		* number of features to identify
 			* number of convolutions also helps us to identify the features. However, convolution layers also helps to identify the combination of features there by creating new features
+			* in this tutorial, the value has been 16, 32 or 64.
 		* parameter capacity of the device where neurons being trained.
 	* RMSprop optimizer let us tune the learning rate parameter
 	* binary_crossentropy gives better result though we could could use multiclass classification.
@@ -164,6 +166,12 @@
 * **ImageGenerator**: In case of images, the real world cases, we have the images in a folder structure. ImageGenerator can read the parent directory and can infer the label in the sub directory as the sub directory name. So all you need to do is to put the relavant  files in the respective subfolder and name subfolder as the label name. It can also create the *Batches, scaling, reshaping* while loading images.
 	* if generator is used to load the data then we need to have fit_generator to train the model. We need to hand stitch the batch and thus steps to an epoch so that model learns from all the training data.
 	* similarly, validation can also be batch wise and can also have steps to epoch so that all the validation data are used for calculating accuracy and loss for each epoch.
+	* what if the image is larger than the one specified in the generator definition?
+		* Ans: the image will be resized to to that mentioned in the generator.
+			* How it will look ? Does it look shrinked or proportionately lowered? Can we compare the features extraction through convolution between the original image and compare the same with that of resized one.
+	* what if the image is smaller than that of the one specified in the generator definition?
+		* ???
+	
 
 * ***Importing through tf.data*** : https://www.youtube.com/watch?v=oFFbKogYdfc
 	* the above video tutorial indicates ``` tf.contrib.data.CsvDataset``` to use for the csv read. However, the latest version indicates, that we have to user keras util function to load csv: https://www.tensorflow.org/beta/tutorials/load_data/csv
