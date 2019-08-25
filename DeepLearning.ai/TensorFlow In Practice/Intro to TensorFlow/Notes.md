@@ -42,7 +42,8 @@
 		* number of features to identify
 			* number of convolutions also helps us to identify the features. However, convolution layers also helps to identify the combination of features there by creating new features
 		* parameter capacity of the device where neurons being trained.
-		
+	* RMSprop optimizer let us tune the learning rate parameter
+	* binary_crossentropy gives better result though we could could use multiclass classification.
 * **Visualizing Convolutions**:
 	* Keras api gives access each of the layers output. Which can  then used as the activation model and thus we can view the output.
 	```
